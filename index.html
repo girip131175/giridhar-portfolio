@@ -183,7 +183,6 @@
     font-family:var(--mono); font-size:11px; color:var(--ink-faint); margin-left:6px;
   }
   .term-body{padding:20px 18px; font-family:var(--mono); font-size:13px; line-height:1.9;}
-  .term-gap{height:7px;}
   .term-body .ln{color:var(--ink-faint);}
   .term-body .cmd{color:var(--teal);}
   .term-body .out{color:var(--ink-dim);}
@@ -296,44 +295,6 @@
   .proj-card:hover .repo-link{color:#f2f5ee;}
   .proj-card:hover .repo-link svg{fill:#f2f5ee;}
 
-  /* ---------- refined project layout ---------- */
-  .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .proj-card{min-height:330px;}
-  .proj-card.project-wide{grid-column:1 / -1;min-height:280px;}
-  .proj-top{padding:25px 25px 0;}
-  .proj-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
-  .proj-card h3{font-size:20px;margin-bottom:10px;}
-  .proj-card p{font-size:13.5px;line-height:1.7;max-width:690px;}
-  .progress-wrap{margin:18px 0 17px;max-width:520px;}
-  .progress-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;
-    font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.5px;}
-  .progress-meta span:last-child{color:var(--purple);}
-  .progress-track{height:5px;background:#211c2c;border-radius:5px;overflow:hidden;border:1px solid #33284a;}
-  .progress-fill{height:100%;width:58%;background:var(--purple);box-shadow:0 0 10px rgba(185,140,255,.25);}
-  .muted-link{color:var(--ink-faint)!important;cursor:default;}
-  .muted-link:hover{color:var(--ink-faint)!important;}
-  .cert-feature{max-width:760px;}
-  .cert-badge-icon{width:108px;height:108px;}
-  .cert-badge-icon img{width:108px;height:108px;object-fit:contain;border-radius:6px;}
-
-
-  .project-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;}
-  .project-action{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--line);border-radius:3px;
-    font-family:var(--mono);font-size:11px;color:var(--ink-dim);background:var(--bg-panel-2);transition:all .15s;}
-  .project-action svg{width:14px;height:14px;fill:currentColor;flex:none;}
-  .project-action:hover{color:var(--amber);border-color:var(--amber-dim);background:#171207;}
-  .repo-link{display:inline-flex!important;align-items:center;gap:6px;}
-  .repo-link svg{width:14px;height:14px;fill:currentColor;flex:none;}
-  .progress-wrap{margin:18px 0 15px;max-width:520px;}
-  .progress-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;
-    font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.5px;}
-  .progress-meta span:last-child{color:var(--purple);}
-  .progress-track{height:5px;background:#211c2c;border-radius:5px;overflow:hidden;border:1px solid #33284a;}
-  .progress-fill{height:100%;width:58%;background:var(--purple);box-shadow:0 0 10px rgba(185,140,255,.25);}
-  .muted-link{color:var(--ink-faint)!important;cursor:default;}
-  .muted-link:hover{color:var(--ink-faint)!important;}
-  .cert-logo{width:112px;height:auto;object-fit:contain;margin-bottom:10px;}
-
   /* certifications */
   .cert-feature{
     display:flex; gap:24px; align-items:center;
@@ -370,20 +331,15 @@
   .fact-label{font-family:var(--mono); font-size:10.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:3px;}
   .fact-val{font-size:13.5px; color:var(--ink);}
 
-  .about-note{margin-top:18px;border:1px solid var(--line);border-left:2px solid var(--teal);
-    background:var(--bg-panel);padding:18px 20px;border-radius:5px;}
-  .note-label{font:10px var(--mono);text-transform:uppercase;letter-spacing:.7px;color:var(--teal);margin-bottom:8px;}
-  .about-note p{font-size:13px;color:var(--ink-dim);line-height:1.7;margin:0;}
-
   /* closing CTA */
   .cta-band{padding:70px 0; text-align:center; border-bottom:none;}
   .cta-band .sec-eyebrow{display:block; margin:0 auto 10px;}
   .cta-band h2{font-size:30px; font-weight:700; margin-bottom:14px;}
   .cta-shell{
+    font-family:var(--mono); font-size:13.5px; line-height:2;
     max-width:420px; margin:0 auto 32px; text-align:left; color:var(--ink-dim);
-    background:var(--bg-panel); border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    border-left:2px solid var(--line-soft); padding-left:18px;
   }
-  .cta-shell .term-body{padding:18px;font-family:var(--mono);font-size:13.5px;line-height:2;}
   .cta-shell .ln{color:var(--ink-faint);}
   .cta-shell .cmd{color:var(--teal);}
   .cta-shell .arrow-out{color:var(--amber); margin-right:6px;}
@@ -430,7 +386,7 @@
       <span class="brand-dot"></span>
     </div>
     <div class="topbar-right">
-      <a class="topbar-cta" href="resume.pdf" download><span class="arrow">↓</span> Resume</a>
+      <a class="topbar-cta" href="https://github.com/girip131175/giridhar-portfolio/blob/main/resume.pdf" target="_blank" rel="noopener"><span class="arrow">↓</span> Resume</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -466,37 +422,17 @@
       <div class="term-panel">
         <div class="term-head">
           <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-          <span class="term-title">whoami.sh : 80×24</span>
+          <span class="term-title">whoami.sh : 80×20</span>
         </div>
         <div class="term-body">
           <div><span class="ln">$</span> <span class="cmd">whoami</span></div>
           <div class="out">giridhar : cybersecurity researcher</div>
-
-          <div class="term-gap"></div>
-
+          <div style="height:8px"></div>
           <div><span class="ln">$</span> <span class="cmd">cat focus.txt</span></div>
           <div class="out"><span class="key">offensive</span> <span class="val">→ penetration testing, red teaming</span></div>
           <div class="out"><span class="key">ai_sec</span> <span class="val">→ LLM &amp; ML model attacks</span></div>
           <div class="out"><span class="key">defense</span> <span class="val">→ anomaly detection, resilience</span></div>
-
-          <div class="term-gap"></div>
-
-          <div><span class="ln">$</span> <span class="cmd">cat profile.txt</span></div>
-          <div class="out"><span class="key">education</span> <span class="val">→ B.Tech CSE / Cybersecurity Specialization</span></div>
-          <div class="out"><span class="key">research</span> <span class="val">→ security of intelligent systems</span></div>
-          <div class="out"><span class="key">offense</span> <span class="val">→ adversarial malware research</span></div>
-          <div class="out"><span class="key">ai_sec</span> <span class="val">→ LLM &amp; ML security</span></div>
-          <div class="out"><span class="key">defense</span> <span class="val">→ intrusion &amp; insider-threat detection</span></div>
-          <div class="out"><span class="key">systems</span> <span class="val">→ experimental infrastructure for training, running &amp; evaluating intelligent systems</span></div>
-
-          <div class="term-gap"></div>
-
-          <div><span class="ln">$</span> <span class="cmd">echo $APPROACH</span></div>
-          <div class="out">identify → research → analyze → attack → build → experiment →</div>
-          <div class="out">error analysis → correct → rebuild → evaluate → validate → strengthen</div>
-
-          <div class="term-gap"></div>
-
+          <div style="height:8px"></div>
           <div><span class="ln">$</span> <span class="cmd">echo $STATUS</span></div>
           <div class="out">available for internships / research roles<span class="cursor"></span></div>
         </div>
@@ -514,10 +450,10 @@
       </div>
       <div class="proof-cell">
         <div class="proof-num">🏆</div>
-        <div class="proof-label">Best Paper: IEEE SPACE 2026</div>
+        <div class="proof-label">Best Paper: IEEE SPACE 2024</div>
       </div>
       <div class="proof-cell">
-        <div class="proof-num">04+</div>
+        <div class="proof-num">04</div>
         <div class="proof-label">Major research &amp; engineering projects</div>
       </div>
       <div class="proof-cell">
@@ -569,25 +505,21 @@
       <div class="proj-card c-ai">
         <div class="proj-top">
           <div class="proj-badges">
-            <span class="proj-badge award">★ Published Research</span>
+            <span class="proj-badge award">★ Best Paper, IEEE SPACE 2024</span>
             <span class="proj-badge cat">AI security</span>
           </div>
-          <h3>DMA-PULSE</h3>
-          <p>A research project on machine-learning-based intrusion detection for industrial and IIoT environments, developed around large-scale network-security data and evaluated through model-driven detection.</p>
+          <h3>[Your publication / project title]</h3>
+          <p>One or two sentences on the actual problem, method, and result, written the way you'd describe it to a professor in the first ten seconds of a conversation.</p>
           <div class="stack-row">
-            <span class="chip">python</span><span class="chip">pytorch</span><span class="chip">ML security</span>
+            <span class="chip">python</span><span class="chip">pytorch</span><span class="chip">2024</span>
           </div>
         </div>
         <div class="proj-foot">
-          <span>Springer LNNS · Published research</span>
-          <div class="project-actions">
-            <a class="project-action" href="https://doi.org/10.1007/978-3-032-23945-7_11" target="_blank" rel="noopener" aria-label="Read DMA-PULSE paper">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8.2L19 7.3v14.2H6V2.5Zm7 1.7H7.7v15.6h9.6V8.2H13V4.2Zm1 0v2.7h2.7L14 4.2ZM9.2 11h6.6v1.5H9.2V11Zm0 3.3h6.6v1.5H9.2v-1.5Z"/></svg><span>Read paper</span>
-            </a>
-            <a class="project-action" href="https://github.com/girip131175/DMA-PULSE" target="_blank" rel="noopener" aria-label="DMA-PULSE GitHub repository">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg><span>View repo</span>
-            </a>
-          </div>
+          <span>Springer LNNS · 2024</span>
+          <a class="repo-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            View repo
+          </a>
         </div>
       </div>
 
@@ -596,16 +528,37 @@
           <div class="proj-badges">
             <span class="proj-badge cat">Offensive security</span>
           </div>
-          <h3>FUMVar-Ex</h3>
-          <p>A Docker-based reproducibility framework and automation engine for adversarial malware research, designed to make malware perturbation experiments repeatable and systematic.</p>
+          <h3>[Project 2 title]</h3>
+          <p>What it does, what you built it with, and the concrete result: one number if you have one (detection rate, findings, latency).</p>
           <div class="stack-row">
-            <span class="chip">python</span><span class="chip">docker</span><span class="chip">adversarial research</span>
+            <span class="chip">python</span><span class="chip">nmap</span><span class="chip">2024</span>
           </div>
         </div>
         <div class="proj-foot">
-          <span>research project</span>
-          <a class="repo-link" href="https://github.com/girip131175/Fumvar-Ex" target="_blank" rel="noopener" aria-label="FUMVar-Ex GitHub repository">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg> View repo
+          <span>personal project · 2024</span>
+          <a class="repo-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            View repo
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card c-defense">
+        <div class="proj-top">
+          <div class="proj-badges">
+            <span class="proj-badge cat">Defensive security</span>
+          </div>
+          <h3>[Project 3 title]</h3>
+          <p>What the detection pipeline does, the data it monitors, and how you validated it worked.</p>
+          <div class="stack-row">
+            <span class="chip">python</span><span class="chip">scikit-learn</span><span class="chip">2024</span>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <span>personal project · 2024</span>
+          <a class="repo-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            View repo
           </a>
         </div>
       </div>
@@ -615,40 +568,17 @@
           <div class="proj-badges">
             <span class="proj-badge cat">AI systems engineering</span>
           </div>
-          <h3>LLMGuard</h3>
-          <p>A domain-specific static-analysis research framework for investigating LLM-targeted software supply-chain attacks in PyPI packages.</p>
-          <div class="progress-wrap">
-            <div class="progress-meta">
-              <span>research status</span><span>in progress</span>
-            </div>
-            <div class="progress-track"><div class="progress-fill"></div></div>
-          </div>
+          <h3>[Project 4 title]</h3>
+          <p>The infrastructure or pipeline you built, what problem it solved, and what made it reproducible.</p>
           <div class="stack-row">
-            <span class="chip">python</span><span class="chip">static analysis</span><span class="chip">AI security</span>
+            <span class="chip">docker</span><span class="chip">pytorch</span><span class="chip">2024</span>
           </div>
         </div>
         <div class="proj-foot">
-          <span>research project · 2026–present</span>
-          <span class="repo-link muted-link">No public repository</span>
-        </div>
-      </div>
-
-      <div class="proj-card c-systems">
-        <div class="proj-top">
-          <div class="proj-badges">
-            <span class="proj-badge award">★ Best Paper · IEEE SPACE 2026</span>
-            <span class="proj-badge cat">AI systems engineering</span>
-          </div>
-          <h3>Self-Healing Satellite</h3>
-          <p>AI pipeline for resilient satellite communications combining TimeGAN for spectrum forecasting, CNN + Vision Transformer for nine-class damage classification, and Edge-Connect GAN for structural repair.</p>
-          <div class="stack-row">
-            <span class="chip">TimeGAN</span><span class="chip">Vision Transformer</span><span class="chip">GANs</span><span class="chip">GPT-2</span>
-          </div>
-        </div>
-        <div class="proj-foot">
-          <span>IEEE SPACE 2026 · Research</span>
-          <a class="repo-link" href="https://github.com/girip131175/Selfhealing_satellite" target="_blank" rel="noopener" aria-label="Self-Healing Satellite GitHub repository">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg> View repo
+          <span>personal project · 2024</span>
+          <a class="repo-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            View repo
           </a>
         </div>
       </div>
@@ -670,8 +600,8 @@
       </div>
       <div>
         <h3>CompTIA Security+</h3>
-        <span class="cert-code">SY0-701 · Certified August 18, 2026 · Valid through August 18, 2029</span>
-        <p>CompTIA Security+ certification earned August 18, 2026. The supplied certificate identifies the SY0-701 examination and a validity date through August 18, 2029.</p>
+        <span class="cert-code">SY0-701 · CompTIA</span>
+        <p>Validated foundational skills across security operations, threat and vulnerability management, security architecture, and governance and risk management.</p>
       </div>
     </div>
   </section>
@@ -684,36 +614,51 @@
         <div class="sec-title">The short version</div>
       </div>
     </div>
-
     <div class="about-grid">
       <div>
-        <p>I'm a <b>cybersecurity researcher</b> and B.Tech CSE student specializing in <b>Cybersecurity</b> at SASTRA Deemed University. My work sits at the intersection of offensive security, AI/ML security, defensive security, and the systems required to study intelligent systems rigorously.</p>
-
-        <p>My research experience spans adversarial malware mutation, insider-threat detection, IIoT security, resilient AI systems, and LLM security. I am particularly interested in understanding how intelligent systems fail under adversarial conditions and then using those findings to build stronger, testable defenses.</p>
-
-        <p>In 2026, I worked as a <b>Research Intern in LLM Security at Colorado State University</b> under Prof. Indrakshi Ray. I worked on secure RAG systems, access-control and information-flow questions, NeMo Guardrails, and adversarial evaluation of LLM-based systems.</p>
-
-        <div class="exp-label">Education</div>
-        <div class="exp-item">
-          <div class="exp-role">B.Tech CSE · Cybersecurity Specialization</div>
-          <div class="exp-org">SASTRA Deemed University · Tamil Nadu · 2022–Present</div>
-          <p>Undergraduate study focused on cybersecurity, with research work spanning machine learning, adversarial security, intelligent systems, and applied security engineering.</p>
-        </div>
+        <p>I'm a cybersecurity researcher building toward a career at the intersection of <b>AI security</b> and <b>systems research</b>. My work spans offensive security, adversarial machine learning, and the infrastructure needed to test both rigorously.</p>
+        <p>I'm currently exploring how adversarial ML techniques translate into practical, deployable defenses, with a research-driven, security-focused approach: identify a real threat, build a working system around it, and validate it against real-world conditions.</p>
 
         <div class="exp-label">Research Experience</div>
         <div class="exp-item">
-          <div class="exp-role">Research Intern · LLM Security</div>
-          <div class="exp-org">Colorado State University · Prof. Indrakshi Ray · 2026</div>
-          <p>Developed and evaluated secure RAG systems across centralized, kernelized, and distributed architectures; implemented NVIDIA NeMo Guardrails for prompt-injection defense and output-safety enforcement, and investigated access-control failures under adversarial conditions.</p>
+          <div class="exp-role">Undergraduate Research Intern</div>
+          <div class="exp-org">Colorado State University · [Year]</div>
+          <p>Worked on [research focus / lab name] as part of an undergraduate research internship, contributing to [specific task, e.g. data collection, model evaluation, or experiment design] under the guidance of [advisor name].</p>
         </div>
 
-
+        <div class="about-facts">
+          <div class="fact">
+            <div class="fact-label">Focus</div>
+            <div class="fact-val">Offensive &amp; AI/ML Security</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Status</div>
+            <div class="fact-val">Open to research &amp; internships</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Research</div>
+            <div class="fact-val">Colorado State University</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Publications</div>
+            <div class="fact-val">1, Springer LNNS 2024</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Awards</div>
+            <div class="fact-val">Best Paper, IEEE SPACE 2024</div>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <div class="about-note">
-          <div class="note-label">Research direction</div>
-          <p>Building toward deeper work in <b>AI security and systems security</b>, with a particular interest in attacking intelligent systems to understand their failure modes and designing infrastructure that can evaluate and strengthen them.</p>
+      <div class="term-panel">
+        <div class="term-head">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">now.sh</span>
+        </div>
+        <div class="term-body">
+          <div><span class="ln">$</span> <span class="cmd">cat now.txt</span></div>
+          <div class="out"><span class="key">reading</span> <span class="val">→ adversarial ML papers</span></div>
+          <div class="out"><span class="key">building</span> <span class="val">→ a detection pipeline for prompt injection</span></div>
+          <div class="out"><span class="key">learning</span> <span class="val">→ how defenses fail at scale</span></div>
         </div>
       </div>
     </div>
@@ -722,27 +667,19 @@
   <!-- CONTACT -->
   <section id="contact" class="cta-band reveal">
     <span class="sec-eyebrow">contact</span>
-    <h2>Let's build something worth&nbsp;&nbsp;while trying to break.</h2>
+    <h2>Let's build something worth while trying to break.</h2>
     <div class="cta-shell">
-      <div class="term-head">
-        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-        <span class="term-title">open to.sh</span>
-      </div>
-      <div class="term-body">
-        <div><span class="ln">$</span> <span class="cmd">cat</span> open_to.txt</div>
-        <div class="out"><span class="arrow-out">→</span>open to research collaborations and internships</div>
-        <div class="out"><span class="arrow-out">→</span>roles in security / AI safety</div>
-        <div style="height:7px"></div>
-        
-        
-      </div>
+      <div><span class="ln">$</span> <span class="cmd">cat</span> availability.txt</div>
+      <div><span class="arrow-out">→</span>research collaborations</div>
+      <div><span class="arrow-out">→</span>internships</div>
+      <div><span class="arrow-out">→</span>roles in security / AI safety<span class="cursor"></span></div>
     </div>
     <div class="cta-actions">
-      <a class="btn btn-primary" href="#">
+      <a class="btn btn-primary" href="mailto:giridharpullela2003@gmail.com">
         <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm17 3.24-7.42 5.57a1 1 0 0 1-1.16 0L4 8.24V17h16V8.24ZM4.5 6l7.5 5.63L19.5 6h-15Z"/></svg>
         Email me
       </a>
-      <a class="btn btn-ghost" href="#">
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/giridhar-pullela/" target="_blank" rel="noopener">
         <svg class="li-icon" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
         Connect on LinkedIn
       </a>
@@ -750,7 +687,7 @@
     <div class="cta-term">
       <div class="term-head">
         <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-        <span class="term-title">availability.sh</span>
+        <span class="term-title">status.sh</span>
       </div>
       <div class="term-body">
         <div><span class="ln">$</span> <span class="cmd">ping</span> giridhar</div>
@@ -762,15 +699,15 @@
   </section>
 
   <footer>
-    <span>© 2026 Giridhar. Built with care, secured by habit.</span>
+    <span>© 2024 Giridhar. Built with care, secured by habit.</span>
     <div class="icon-row">
-      <a class="icon-btn gh" href="https://github.com/girip131175" aria-label="GitHub">
+      <a class="icon-btn gh" href="#" aria-label="GitHub">
         <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.16.69-3.83-1.34-3.83-1.34-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.31-5.19 5.59.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
       </a>
-      <a class="icon-btn li" href="https://www.linkedin.com/in/giridhar-pullela/" aria-label="LinkedIn">
+      <a class="icon-btn li" href="#" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
       </a>
-      <a class="icon-btn mail" href="mailto:giridharpullela2003@gmail.com" aria-label="Email">
+      <a class="icon-btn mail" href="#" aria-label="Email">
         <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm17 3.24-7.42 5.57a1 1 0 0 1-1.16 0L4 8.24V17h16V8.24ZM4.5 6l7.5 5.63L19.5 6h-15Z"/></svg>
       </a>
     </div>
