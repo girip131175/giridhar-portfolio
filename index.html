@@ -339,9 +339,10 @@
     display:flex; gap:24px; align-items:center;
     border:1px solid var(--line); border-top:3px solid var(--amber); border-radius:8px;
     padding:28px 30px; background:var(--bg-panel); max-width:660px;
-    transition:transform .15s, border-color .15s;
+    transition:transform .15s, border-color .15s, box-shadow .15s;
+    cursor:pointer;
   }
-  .cert-feature:hover{transform:translateY(-3px);}
+  .cert-feature:hover{transform:translateY(-3px); border-color:var(--amber-dim); box-shadow:0 20px 40px -24px rgba(0,0,0,0.7);}
   .cert-badge-icon{
     width:84px; height:84px; flex-shrink:0; position:relative;
     display:flex; align-items:center; justify-content:center;
@@ -351,7 +352,12 @@
   .cert-feature .cert-code{
     font-family:var(--mono); font-size:12px; color:var(--teal); margin-bottom:10px; display:block;
   }
-  .cert-feature p{font-size:13.5px; color:var(--ink-dim); line-height:1.6; margin-bottom:0;}
+  .cert-feature p{font-size:13.5px; color:var(--ink-dim); line-height:1.6; margin-bottom:10px;}
+  .cert-verify{
+    font-family:var(--mono); font-size:12px; color:var(--amber); display:inline-block;
+    transition:color .15s;
+  }
+  .cert-feature:hover .cert-verify{color:#ffc63d;}
 
   /* about */
   .about-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:start;}
@@ -664,7 +670,7 @@
         <div class="sec-title">Credentials on record</div>
       </div>
     </div>
-    <div class="cert-feature">
+    <a class="cert-feature" href="https://www.credly.com/badges/c2d257af-b3d9-47cf-acb9-63af2f399c0f/public_url" target="_blank" rel="noopener">
       <div class="cert-badge-icon">
         <img src="comptia-security-plus-badge.png" alt="CompTIA Security+ Certified badge">
       </div>
@@ -672,8 +678,9 @@
         <h3>CompTIA Security+</h3>
         <span class="cert-code">SY0-701 · Certified August 18, 2026 · Valid through August 18, 2029</span>
         <p>CompTIA Security+ certification earned August 18, 2026. The supplied certificate identifies the SY0-701 examination and a validity date through August 18, 2029.</p>
+        <span class="cert-verify">Verify on Credly →</span>
       </div>
-    </div>
+    </a>
   </section>
 
   <!-- ABOUT -->
